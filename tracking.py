@@ -52,7 +52,7 @@ while True:
     frame_idx += 1
     current_ids.clear()
 
-    # Detect persons every frame (remove/do_detect logic if you want)
+    # Detect persons every frame
     results = model.predict(frame, conf=0.35, iou=0.45, classes=[0], imgsz=640, verbose=False)[0]
 
     # Prepare detections for DeepSORT
